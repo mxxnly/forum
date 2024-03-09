@@ -1,9 +1,15 @@
 .col {
-    margin-bottom: 16px; 
+    margin-bottom: 20px; 
 } 
 
+.formWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 form#mainpage{
-    width: 300px; /* Автоматична ширина */
+    width: auto; /* Автоматична ширина */
     height: 900px; /* Автоматична висота */
     margin: 0 auto;
     border: 1px solid #cccccc98;
