@@ -1,0 +1,50 @@
+{% extends "main/base.html" %}
+{% block title%}
+Java
+{% endblock %}
+{% block maincont %}
+{% load static %}
+<main class="main container">
+    <div class="container " id="tip">
+        <h1>Як встановити java?</h1><br>
+        <h2>Windows:</h2>
+        <h3>1. Завантажте Java Development Kit (JDK): </h3>
+        <h4>- Перейдіть на <a href="https://www.oracle.com/java/technologies/javase-downloads.html">офіційний веб-сайт JDK</a> або <a href="https://www.java.com/ru/">Java</a>.<br>
+            - Завантажте відповідну версію JDK для вашої операційної системи.</h4>
+        <img id="tip" src="{% static 'img/javadown.png' %}" class="img-fluid" alt="Зображення"><br>
+        <h3>2. Встановлення JDK: </h3>
+        <h4>- Запустіть інсталятор, який ви завантажили.<br>
+            - Слідуйте інструкціям на екрані для встановлення JDK.</h4><br>
+        <h3>3. Встановлення системних змінних: </h3>
+        <h4>- Додайте шлях до встановленої JDK до змінної середовища PATH.<br>
+            - Відкрийте "Системні властивості" -> "Додатково" -> "Змінні середовища".<br>
+            - В розділі "Системні змінні" знайдіть змінну Path та додайте шлях до папки bin встановленої JDK.</h4><br>
+        <h2>macOS:</h2>
+        <h3>1. Використання Homebrew (рекомендовано): </h3>
+        <h4> Встановіть <a href="https://brew.sh/">Homebrew</a>, якщо він ще не встановлений. <br>
+            - Використовуйте команду: brew install openjdk.</h4><br>
+        <h3>2. Використання офіційного інсталятора: </h3>
+        <h4>- Завантажте JDK з <a href="https://www.oracle.com/java/technologies/javase-downloads.html">офіційного сайту JDK</a>.<br>
+            - Встановіть JDK, використовуючи отриманий інсталятор.</h4><br>
+        <h2>Linux:</h2>
+        <h3>1. Використання системного пакунка (Ubuntu приклад): </h3>
+        <h4> - Використовуйте команду: sudo apt-get install default-jdk.</h4><br>
+        <h3>2. Використання офіційного інсталятора: </h3>
+        <h4>- Завантажте JDK з <a href="https://www.oracle.com/java/technologies/javase-downloads.html">офіційного сайту JDK</a>.<br>
+            - Встановіть JDK, використовуючи отриманий інсталятор.</h4><br>
+        <h3>### Перевірте встановлення:<br>
+
+            Після встановлення ви можете перевірити, чи правильно встановлено Java, використовуючи команду:
+            <br>
+            <code>
+                java -version
+            </code>
+            <br>
+            Це має вивести інформацію про встановлену версію Java на вашому комп'ютері.</h3>
+    </div>
+</main>
+
+{% endblock %}
+
+
+

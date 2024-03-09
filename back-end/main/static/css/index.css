@@ -1,0 +1,24 @@
+.col {
+    margin-bottom: 16px; 
+} 
+
+form#mainpage{
+    width: 300px; /* Автоматична ширина */
+    height: 900px; /* Автоматична висота */
+    margin: 0 auto;
+    border: 1px solid #cccccc98;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+    word-wrap: break-word;
+}
+
+form#mainpage:hover {
+    transform: scale(1.03);
+}
+.form-group{
+    padding: 20px;
+    
+}
+form img {
+    border-radius: 10px;
+  }

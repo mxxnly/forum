@@ -1,0 +1,30 @@
+{% extends "main/base.html" %}
+{% block title%}
+Python
+{% endblock %}
+{% block maincont %}
+<main class="main container">
+    <div class="container " id="tip">
+        <h1>Як правильно встановити python?</h1><br>
+        <h2>Крок 1: Завантажте Python</h2>
+        <h3>Перейдіть на офіційний веб-сайт Python за адресою <a href="https://www.python.org/">https://www.python.org/</a>. На головній сторінці ви побачите кнопку "Downloads". Клацніть на неї.</h3>
+        <img id="tip" src="img/python1.png" class="img-fluid" alt="Зображення"><br>
+        <h2>Крок 2: Виберіть версію Python</h2>
+        <h3>На сторінці завантаження вам буде пропоновано вибрати версію Python. Рекомендовано завантажити останню стабільну версію (на момент моєї останньої інформації це була версія 3.x.x).</h3>
+        <img id="tip" src="img/python2.png" class="img-fluid" alt="Зображення"><br>
+        <h2>Крок 3: Виберіть платформу</h2>
+        <h3>Оберіть вашу операційну систему. Якщо ви використовуєте Windows, вам може бути запропоновано вибрати між 32-бітною та 64-бітною версією. Виберіть ту, яка підходить для вашої системи.</h3>
+        <img id="tip" src="img/python3.png" class="img-fluid" alt="Зображення"><br>
+        <h2>Крок 4: Запустіть інсталятор</h2>
+        <h3>Завантажений файл - це інсталятор Python. Відкрийте його та слідуйте інструкціям інсталятора. Переконайтеся, що ви встановлюєте опцію "Add Python to PATH" (додати Python до системного шляху), це спростить вам викликати Python з командного рядка.</h3>
+        <img id="tip" src="img/python4.png" class="img-fluid" alt="Зображення"><br>
+        <h2>Крок 5: Перевірте встановлення</h2>
+        <h3>Відкрийте командний рядок (на Windows ви можете використовувати Command Prompt або PowerShell, на Unix-подібних системах - Terminal) і введіть команду:</h3><br>
+        <code>
+            python --version
+        </code>
+        <br>
+    </div>
+</main>
+
+{% endblock %}
