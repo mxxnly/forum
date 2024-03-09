@@ -21,7 +21,7 @@ def form_view(request):
         form = YourModelForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
-            return redirect('success')  # Замените 'success_url' на URL, куда вы хотите перенаправить после успешной отправки формы
+            return redirect('index')  # Замените 'success_url' на URL, куда вы хотите перенаправить после успешной отправки формы
     else:
         form = YourModelForm()
     return render(request, 'main/your_template.html', {'form': form})
