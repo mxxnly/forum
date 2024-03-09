@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from .forms import YourModelForm
+from django.contrib import messages
 # Create your views here.
 
 
@@ -14,8 +15,6 @@ def java(request):
     return render(request, 'main/java.html')
 def python(request):
     return render(request, 'main/python.html')
-def success_add(request):
-    return render(request,'main/success_url.html')
 def form_view(request):
     if request.method == 'POST':
         form = YourModelForm(request.POST, request.FILES)

@@ -10,7 +10,6 @@ urlpatterns = [
     path('python', views.python,name='python'),
     path('java', views.java,name='java'),
     path('form', form_view, name='form_view'),
-    path('success_add',views.success_add, name='success')
 
 
 ]
