@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block links %}
-    <link href="{% static 'css/form.css' %}" rel="stylesheet">
+    <link href="{% static 'css/tip.css' %}" rel="stylesheet">
 {% endblock %}
 
 {% block title %}
@@ -10,6 +10,7 @@
 {% endblock %}
 
 {% block maincont %}
+
 <main class="main container">
     <div class="formFormWrapper container text-center">
         <div class="formForm row row-cols-1">
@@ -19,13 +20,30 @@
                     {{ form.as_p }}
                     <button type="submit">Надіслати</button>
                 </form>
-            
             </div>
         </div>
     </div>
 </main>
+<div class="alertok">
+    {% if messages %}
+        {% for message in messages %}
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            {{ message }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        {% endfor %}
+    {% endif %}
+</div>
 {% endblock %}
+
 {% block script%}
-       
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function(){
+        var delayTime = 2000; 
+        $(".alert").delay(delayTime).fadeOut();
+    });
+</script>
+
         
 {% endblock %}

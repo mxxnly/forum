@@ -4,7 +4,8 @@ from .forms import YourModelForm
 from django.contrib import messages
 # Create your views here.
 
-
+def signin(request):
+    return render(request, 'main/signin.html')
 def index(request):
     return render(request, 'main/index.html')
 def about(request):
@@ -20,7 +21,7 @@ def form_view(request):
         form = YourModelForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
-            return redirect('index')  # Замените 'success_url' на URL, куда вы хотите перенаправить после успешной отправки формы
+            messages.success(request, 'Form submitted successfully!')
     else:
         form = YourModelForm()
     return render(request, 'main/your_template.html', {'form': form})
