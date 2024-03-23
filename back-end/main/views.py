@@ -2,12 +2,17 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from .forms import YourModelForm
 from django.contrib import messages
+from .models import YourModel
 # Create your views here.
 
 def signin(request):
     return render(request, 'main/signin.html')
 def index(request):
-    return render(request, 'main/index.html')
+    your_model_data = YourModel.objects.all()  # Получаем данные из модели, если они доступны
+    context = {
+        'your_model_data': your_model_data,
+    }
+    return render(request, 'main/index.html', context)
 def about(request):
     return render(request, 'main/creators.html')
 def addyourtip(request):

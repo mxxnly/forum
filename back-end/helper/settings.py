@@ -67,7 +67,7 @@ TEMPLATES = [
         },
     },
 ]
-
+DEFAULT_FILE_STORAGE = 'django.core.files.storage.FileSystemStorage'
 WSGI_APPLICATION = 'helper.wsgi.application'
 
 
@@ -138,8 +138,12 @@ TEMPLATES = [
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [
     BASE_DIR / '../front-end/localfiles',
+    BASE_DIR / '../back-end/photos'
 ]
+
+MEDIA_ROOT = BASE_DIR / 'photos'
+
+MEDIA_URL = '/photos/'
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
-
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
